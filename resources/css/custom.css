@@ -1,0 +1,45 @@
+/* Estilos básicos para el contenedor de la tabla */
+.tabla-estilizada {
+    width: 80%; /* Ocupa el 80% del ancho del contenedor */
+    border-collapse: collapse; /* Combina los bordes de las celdas */
+    margin: 25px 0; /* Margen superior e inferior */
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Sombra ligera */
+}
+
+/* Estilos para el encabezado (<thead>) */
+.tabla-estilizada thead tr {
+    background-color: #009879; /* Color de fondo vibrante */
+    color: #ffffff; /* Color del texto blanco */
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Estilos para las celdas de encabezado y datos (<th> y <td>) */
+.tabla-estilizada th,
+.tabla-estilizada td {
+    padding: 12px 15px;
+}
+
+/* Estilos para las filas del cuerpo (<tbody>) */
+.tabla-estilizada tbody tr {
+    border-bottom: 1px solid #dddddd; /* Separador de fila */
+}
+
+/* Efecto cebra para mejorar la legibilidad */
+.tabla-estilizada tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3; /* Color de fondo más claro para filas pares */
+}
+
+/* Estilo para la última fila */
+.tabla-estilizada tbody tr:last-of-type {
+    border-bottom: 2px solid #009879; /* Borde inferior más grueso y del color principal */
+}
+
+/* Efecto hover: resalta la fila al pasar el ratón */
+.tabla-estilizada tbody tr:hover {
+    background-color: #e0f7f3; /* Color muy claro al pasar el ratón */
+    cursor: pointer;
+}
