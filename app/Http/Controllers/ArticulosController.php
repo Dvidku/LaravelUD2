@@ -45,6 +45,24 @@ class ArticulosController extends Controller
             ->with('success', 'Artículo borrado correctamente');
     }
 
+    public function create(){
+    return view('articulos.create');
+    }
+
+    public function store(){
+        $title = request('title');
+        $body = request('body');
+        $date = request('date');
+
+        Article::create([
+            'user_id'=> 1,
+            'title' => $title,
+            'body' => $body,
+            'date' => $date
+        ]);
+        return view('articulos.index', ['articulos' => Article::all()]);
+    }
+
 }
 
 
